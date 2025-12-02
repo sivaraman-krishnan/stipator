@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Stipator",
+    "slug": "stipator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B6B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stipator.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Stipator needs your location to track your trip and keep you safe.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Stipator needs your location in the background to monitor your trip and send alerts to trusted contacts if your route deviates.",
+        "NSLocationAlwaysUsageDescription": "Stipator needs your location in the background to monitor your trip and send alerts to trusted contacts.",
+        "UIBackgroundModes": ["location"]
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyD9fFhIMmgczgZ2YX8XJdArrUN1le6Q2Nk"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B6B"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.stipator.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD9fFhIMmgczgZ2YX8XJdArrUN1le6Q2Nk"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Stipator to use your location to track trips and keep you safe.",
+          "locationAlwaysPermission": "Allow Stipator to use your location in the background to monitor your trip.",
+          "locationWhenInUsePermission": "Allow Stipator to use your location to track trips.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ]
+  }
+}
